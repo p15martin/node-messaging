@@ -1,0 +1,21 @@
+{
+  "author": "Peter Martin <peter@experiencecraftsmanship.com> (www.experiencecraftsmanship.com)",
+  "name": "node-messaging",
+  "description": "Simple messaging API for AMQP",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/p15martin/node-messaging.git"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 0.4.7"
+  },
+  "dependencies": {
+    "amqp": ">= 0.0.x",
+    "async": ">= 0.1.x"
+  },
+  "devDependencies": {
+    "buster": ">= 0.3.x"
+  }
+}
