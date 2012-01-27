@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/p15martin/node-messaging.git"
+    "url": "git@github.com:p15martin/node-messaging.git"
   },
   "main": "index",
   "engines": {
