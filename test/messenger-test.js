@@ -257,6 +257,16 @@ buster.testCase( "Test publish message", {
         } catch ( error ) {}
 
         assert( publishSpy.threw() );
+    },
+    "with no exchange": function() {
+        this.stub( this.messenger, "getConnection" ).returns( this.connection );
+
+        var publishStub = this.stub( this.exchange, "publish" ).withArgs( this.routingKey, this.message, this.messageOptions );
+        this.exchange.publish = publishStub;
+
+        this.messenger.publish( "dummyExchange", this.routingKey, this.message, this.messageOptions );
+
+        assert.equals( publishStub.callCount, 0 );
     }
 });
 
@@ -290,6 +300,16 @@ buster.testCase( "Test subscribe", {
         } catch ( error ) {}
 
         assert( subscribeSpy.threw() );
+    },
+    "with no queue": function() {
+        this.stub( this.messenger, "getConnection" ).returns( this.connection );
+
+        var subscribeStub = this.stub( this.queue, "subscribe" ).withArgs( this.subscribeOptions, this.messageHandler );
+        this.queue.subscribe = subscribeStub;
+
+        this.messenger.subscribe( "dummyQueue", this.subscribeOptions, this.messageHandler );
+
+        assert.equals( subscribeStub.callCount, 0 );
     }
 });
 
@@ -384,7 +404,6 @@ buster.testCase( "Test open and subscribe", {
         assert.callOrder( openExchangeStub, openQueueStub, bindQueueToExchangeStub, subscribeStub );
     }
 });
-
 
 buster.testCase( "Test open for publish", {
     setUp: function() {
