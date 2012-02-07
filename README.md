@@ -1,5 +1,3 @@
-This is a simple messaging API for AMQP, which is developed on [node-amqp](https://github.com/postwait/node-amqp).
+This is a simple messaging API for AMQP. It wraps [node-amqp](https://github.com/postwait/node-amqp) to provide convenience methods for publishing and subscribing. For the developer it abstracts all the mechanics concerning the connection, exchanges, queues, and binding.
 
-To see how it used look at the loopback example. The concept is simple, you create a Producer to produce/send messages, and a Consumer to consume/receive messages.
-
-This API abstracts all the creation of the connection, the exchange, the queue, etc.
+Although the API provides an abstraction, it does not prevent the developer from dropping down a level and working directly with the connection, exchanges, or queues. There are functions to obtain references to each of these. Nor does it change the behaviour of [node-amqp](https://github.com/postwait/node-amqp), the same configuration options apply as does the associated documentation.
