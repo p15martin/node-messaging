@@ -1,8 +1,8 @@
 {
   "author": "Peter Martin <peter@experiencecraftsmanship.com> (www.experiencecraftsmanship.com)",
-  "name": "node-messaging",
+  "name": "messaging",
   "description": "Simple messaging API for AMQP",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index",
   "engines": {
     "node": ">= 0.4.7"
