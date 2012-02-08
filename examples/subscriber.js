@@ -1,6 +1,7 @@
 var messaging = require( "../lib/library" );
 
-var url = "amqp://pbizchjy:LwmnGi9zQN1pX2yU@ydsxtmvm.heroku.srs.rabbitmq.com:23569/ydsxtmvm";
+// var url = "amqp://pbizchjy:LwmnGi9zQN1pX2yU@ydsxtmvm.heroku.srs.rabbitmq.com:23569/ydsxtmvm";
+var url = "amqp://yqagxiwn:5sb6a7Hlhdmfis9J@wleaeikm.heroku.srs.rabbitmq.com:21175/wleaeikm";
 var exchangeName = "myexchange";
 var exchangeOptions = { type: "topic" };
 var queueName = "myqueue";
